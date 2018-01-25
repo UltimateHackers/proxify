@@ -50,6 +50,6 @@ proxy = proxify.get(5)
 |Function Name|What the do|
 |----|----|
 |many()|Returns the list of maximum proxies you can dump|
-|get(n)|Returns the list of n proxies, _0 < n <= 300_ |
+|get(NUMBER)|Returns the list of n proxies, _0 < n <= 300_ |
 |one()|Returns the string of proxies|
 
