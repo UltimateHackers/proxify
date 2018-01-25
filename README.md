@@ -1,12 +1,24 @@
 # Proxify [![python](https://img.shields.io/badge/Python-universal-white.svg?style=style=flat-square)](https://www.python.org/downloads/) ![version](https://img.shields.io/badge/Version-v1_(stable)-blue.svg?style=style=flat-square) [![license](https://img.shields.io/badge/License-GPL_3-orange.svg?style=style=flat-square)](https://github.com/UltimateHacke/XSStrike/blob/master/license.txt)
 
-<img src='https://i.imgur.com/AidfpCt.png' />
+> Proxify is a python module for dumping usable proxies.
 
-Proxify is a python module for dumping usable proxies.
+<p align="center">
+  <img src="https://i.imgur.com/AidfpCt.png">
+</p>
 
-## Documentation
+# How to install
++ In Linux
+```
+$ pip install --user proxify
+```
++ In Windows
+```
+> pip install proxify
+```
 
-The proxies returned by <b>proxify</b> are in following format:
+# How to use
+
+The proxies returned by **proxify** are in following format:
 ```
 protocol://ip_address:port
 ```
@@ -19,39 +31,25 @@ To get 1 proxy you can simply do this:
 import proxify
 proxy = proxify.one()
 ```
-Output:
-```
-http://103.74.244.199:8080
-```
-<hr />
+--------
 
 To get many proxies, do this:
 ``` python
 import proxify
 proxy = proxify.many()
 ```
-Output:
-```
-[u'http://47.88.32.46:3128', u'http://47.52.222.165:80', u'http://37.59.47.13:3128',
-u'http://67.63.33.7:80', u'http://51.15.35.239:3128', u'http://185.82.212.95:8080',
-u'http://151.80.140.233:54566', u'http://27.254.200.55:80', u'http://173.212.228.42:10059',
-u'http://115.84.178.73:6666', u'http://47.88.242.10:80'
-.....
-u'http://54.207.104.166:8080']
-```
-<hr />
+------
 
 To dump a specific number of proxies, lets say '5'. You can do this:
 ``` python
 import proxify
 proxy = proxify.get(5)
 ```
-Output:
-```
-[u'http://47.88.32.46:3128', u'http://47.52.222.165:80', u'http://37.59.47.13:3128',
-u'http://67.63.33.7:80', u'http://51.15.35.239:3128']
-```
 
-### Note
-The many() function dumps 300 proxies which is also the maximum number of proxies you can dump with get() function. If you specify a number large than 300, it will automatically become 300.<br>
-The one() function returns a string while many() and get() return a list.
+# What the functions do ?
+|Function Name|What the do|
+|----|----|
+|many()|Returns the list of maximum proxies you can dump|
+|get(NUMBER)|Returns the list of n proxies, _0 < n <= 300_ |
+|one()|Returns the string of proxies|
+
