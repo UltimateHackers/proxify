@@ -18,6 +18,7 @@ For example,
 ```
 http://127.0.0.1:8080
 ```
+
 To get 1 proxy you can simply do this:
 ``` python
 import proxify
@@ -57,6 +58,8 @@ u'http://67.63.33.7:80', u'http://51.15.35.239:3128']
 ```
 
 ### Note
+By default, not passing parameters will be queried the list of new proxies,
+while passing as arguments 'anonimous', 'uk', 'us' the respective lists will be queried.<br>
 The many() function dumps 300 proxies which is also the maximum number of proxies you can dump with get() function. If you specify a number large than 300, it will automatically become 300.<br>
 The one() function returns a string while many() and get() return a list.
 
